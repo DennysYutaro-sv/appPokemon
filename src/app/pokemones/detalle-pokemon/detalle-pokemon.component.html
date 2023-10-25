@@ -1,0 +1,27 @@
+
+<div class="block-content">
+    <div class="ng-star-inserted">
+        <div class="surface-section px-4 py-8 md:px-6 lg:px-8">
+            <div class="grid">
+                <div class="col-12 md:col-6 flex align-items-center"><div>
+                    <div class="text-blue-600 text-xl mb-3">POKEMON</div>
+                    <div class="text-900 text-4xl font-bold mb-6">{{ pokemon.name | uppercase }}</div>
+                    <div class="grid"><div class="col-12 md:col-6">
+                        <div class="text-900 font-medium mb-2">HABILIDAD ESPECIAL</div>
+                        <div class="text-700 mb-3 line-height-3">El pokemon tiene la habilidad especial <b>{{pokemon.abilities[0].ability.name}}</b>.</div></div>
+                        <div class="col-12 md:col-6">
+                            <div class="text-900 font-medium mb-2">DEFENSA</div><div class="text-700 mb-3 line-height-3">El pokemon tiene una defensa de <b>{{pokemon.stats[0].base_stat}} ptos</b>.</div></div>
+                        <div class="col-12 md:col-6">
+                            <div class="text-900 font-medium mb-2">EXPERIENCIA</div><div class="text-700 mb-3 line-height-3">El pokemon tiene una experiencia en combate de <b>{{pokemon.base_experience}} ptos</b>.</div></div>
+                        <div class="col-12 md:col-6">
+                            <div class="text-900 font-medium mb-2">ALTURA</div><div class="text-700 mb-3 line-height-3">El pokemon tiene una altura de <b>{{pokemon.height}} FT</b> .</div></div>
+                    </div>
+                </div>
+                </div>
+                <div class="col-12 md:col-6">
+                    <img src="{{pokemon.sprites.other.dream_world.front_default}}" alt="Image" [style]="{width: '450px',height:'400px'}" class="w-full">
+                </div>
+            </div>
+        </div>
+    </div><!----><!---->
+</div>

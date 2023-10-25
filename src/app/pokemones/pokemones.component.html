@@ -1,0 +1,25 @@
+
+<div class="grid p-fluid" style="width: 100%;">
+    <div *ngFor="let pokemon of pokemones | paginacion:pagina" class="col-12 md:col-4">
+        <p-card header="{{ pokemon.nombre | uppercase }}" subheader="IDENTIFICADOR: {{pokemon.id}}" [style]="{width: '360px'}" styleClass="p-card-shadow">
+            <ng-template pTemplate="header">
+                <img alt="Card" src="{{pokemon.imagen}}" [style]="{width: '350px',height:'300px'}">
+            </ng-template>
+
+            <ng-template pTemplate="footer">
+                <button [routerLink]="['/pokemon/detalle/',pokemon.id]" pButton icon="pi pi-eye" pRipple type="button" label="Detalles" class="p-button-outlined p-button-info"></button>
+            </ng-template>
+        </p-card>
+    </div>
+    
+</div>
+<br>
+<div class="flex align-items-center justify-content-center">
+    <span class="p-buttonset">
+        <button class="p-button-outlined" (click)="previousPagina()" pButton pRipple label="Anterior " icon="pi pi-angle-left"></button>
+        <button class="p-button-outlined" (click)="nextPagina()" pButton pRipple label="Siguiente" icon="pi pi-angle-right"></button>
+    </span>
+</div>
+
+<br>
+<div class="col-12 md:col-4"> </div>
